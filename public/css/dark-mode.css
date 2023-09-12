@@ -1,0 +1,92 @@
+[data-bs-theme=dark] {
+
+    .navbar {
+        transition: all .3s;
+        background-color: #212529;
+    }
+
+    .navbar.transparent {
+        transition: .3s;
+        background-color: transparent;
+        backdrop-filter: blur(3px);
+    }
+
+    .nav-head .nav-item .nav-link {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .nav-head .nav-item .nav-link {
+        text-decoration: none;
+        position: relative;
+    }
+
+    .nav-head .nav-item .nav-link:hover {
+        text-decoration: none;
+    }
+
+    .nav-head .nav-item .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background-color: #fff;
+        height: 3px;
+        transition: all 0.4s ease-in-out;
+    }
+
+    .nav-head .nav-item .nav-link:hover::after {
+        right: 0;
+        opacity: 1;
+    }
+
+    .nav-head .nav-item .nav-link.active::after {
+        right: 0;
+        opacity: 1;
+    }
+
+    .nav-line .nav-item .nav-link {
+        text-decoration: none;
+        position: relative;
+        color: #fff;
+    }
+
+    .nav-line .nav-item .nav-link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background-color: #ffcc00;
+        height: 2px;
+    }
+
+    .nav-line .nav-item .nav-link.active::after {
+        right: 0;
+        opacity: 1;
+    }
+
+    .nav-line .nav-item .nav-link:hover::after {
+        right: 0;
+        opacity: 1;
+    }
+
+    .card.selection {
+        transform: translateY(-30px);
+        z-index: 10;
+        background-color: #212529;
+    }
+
+    .card .game-img {
+        transform: translateX(5.1rem);
+        width: 145px;
+        height: 145px;
+        background-color: #1F2327;
+        padding-top: 10px;
+        border-radius: 9px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.35);
+        margin-bottom: 25px;
+    }
+}

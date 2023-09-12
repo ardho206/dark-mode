@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    transition: all .3s;
+    background-color: #f8f9fa;
+}
+
+.navbar.transparent {
+    transition: .3s;
+    background-color: transparent;
+    backdrop-filter: blur(3px);
+}
+
+.navbar .navbar-nav,
+.navbar .navbar-brand {
+    transform: translateX(0);
+    transition: .3s;
+}
+
+.navbar.transparent .navbar-nav {
+    transform: translateX(-35px);
+}
+
+.navbar.transparent .navbar-brand {
+    transform: translateX(35px);
+}
+
+.nav-head .nav-item .nav-link,
+.nav-line .nav-item .nav-link {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-head .nav-item .nav-link:hover,
+.nav-line .nav-item .nav-link:hover {
+    text-decoration: none;
+}
+
+.nav-head .nav-item .nav-link::after,
+.nav-line .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 3px;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-head .nav-item .nav-link:hover::after,
+.nav-line .nav-item .nav-link.active::after,
+.nav-line .nav-item .nav-link:hover::after {
+    right: 0;
+    opacity: 1;
+}
+
+.theme {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.navbar-brand .img-brand {
+    transition: all .3s ease-in-out;
+}
+
+.navbar-brand:hover .img-brand {
+    transform: scale(1.1) rotate(-8deg);
+}
+
+.nav-line .nav-item .nav-link {
+    color: #000;
+}
+
+.nav-line .nav-item .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: #ffcc00;
+    height: 2px;
+}
+
+swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+swiper-slide {
+    background-position: center;
+    object-fit: cover;
+    width: 400px;
+    height: 300px;
+}
+
+swiper-slide img {
+    width: 641px;
+}
+
+.card {
+    text-decoration: none;
+}
+
+.card.selection {
+    transform: translateY(-30px);
+    z-index: 10;
+    background-color: #FAFAFA;
+    margin-bottom: 24px;
+    border-radius: 0;
+}
+
+.card .game-logo {
+    width: 95px;
+    height: 95px;
+    position: absolute;
+    top: -2.7rem;
+    transform: translateX(2.4rem);
+    transition: transform 0.3s, border-color 0.3s;
+    border-radius: 8px;
+    border: 2px solid gold;
+}
+
+.card:hover .game-logo {
+    transform: translateX(2.4rem) scale(1.1);
+    border-color: #ffcc00;
+    z-index: 1;
+}
+
+.card:hover .btn-topup {
+    background-color: #FF962D;
+    color: #FAFAFA;
+}
+
+.card .card-body {
+    border-radius: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .35);
+}
+
+.card .game-name {
+    padding-top: 56px;
+
+}
+
+.card .game-name .name-game {
+    font-size: 15px;
+}
+
+.card .game-name small {
+    font-size: 11px;
+    color: #ffcc00;
+}
+
+.card .game-name .btn-topup {
+    border: 1px solid #FF962D;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+    border-radius: 15px;
+    margin-top: 8px;
+}
+
+.search {
+    margin-bottom: 30px;
+}
+
+.popular h4 {
+    margin-bottom: 4.4rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.option .btn {
+    padding: 2px 17px 2px 17px;
+    border-radius: 8px;
+    border: 2px solid #A2A7AD;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.option .btn.active-button {
+    background-color: #A2A7AD;
+    color: #000;
+}
+
+.option .btn:hover {
+    background-color: #A2A7AD;
+    color: #000;
+}
+
+.img-banner {
+    width: 100%;
+    height: 16rem;
+    position: sticky;
+    top: 3.6rem;
+}
+
+.banner-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 7px 7px;
+}
+
+.img-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 0 0 7px 7px;
+    z-index: 1;
+}
+
+.note {
+    font-size: 12px;
+    margin-bottom: 32px;
+}
+
+.note-head {
+    color: #DE0217;
+}
+
+.note-body a {
+    text-decoration: none;
+}
+
+.method .btn {
+    padding: 4px 8px 4px 8px;
+    border-radius: 8px;
+    border: 2px solid #A2A7AD;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+    height: 3.6rem;
+    margin-bottom: 3px;
+}
+
+.method .btn img {
+    width: 65%;
+    height: 85%;
+}
+
+.card .game img {
+    width: 95px;
+    height: 95px;
+    border-radius: 7px;
+}
+
+.card .game-desc p {
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.card .game-desc small {
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.card .game {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.card .game .game-title {
+    margin-left: 16px;
+}
+
+.card .game .game-title h5 {
+    font-size: 23px;
+    position: relative;
+}
+
+.card .game .game-title h5::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 4.8rem;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #ffcc00;
+}
+
+.game, .aplikasi, .jasa-joki {
+    display: none;
+}
+
+.active-content {
+    display: block;
+}
+
+.top-up-header {
+    margin-bottom: 24px;
+}
+
+.top-up-header h5 {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.top-up-header h5 span {
+    background-color: #FFBC27;
+    border-radius: 25px;
+    padding: 4px 14px 4px 14px;
+    margin-right: 8px;
+}
+
+.nominal-header {
+    margin-bottom: 13px;
+}
+
+.nominal-header h5 {
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.nominal-header h5 span {
+    background-color: #FFBC27;
+    border-radius: 25px;
+    padding: 4px 13px 4px 13px;
+    margin-right: 8px;
+}
+
+.nominal-body input {
+    display: none;
+}
